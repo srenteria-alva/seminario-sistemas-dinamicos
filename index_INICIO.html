@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="II Seminario Internacional de Sistemas Dinámicos. Departamento de Matemáticas, Universidad Nacional de Trujillo. 9 al 12 de noviembre de 2026, modalidad online.">
+  <meta name="theme-color" content="#082b52">
+  <title>II Seminario Internacional de Sistemas Dinámicos | UNT</title>
+  <style>
+    :root {
+      --navy:#082b52; --blue:#135da8; --sky:#eaf4ff; --gold:#e3b341;
+      --ink:#172b43; --muted:#526579; --white:#fff; --line:#d9e4ef;
+      --surface:#f5f8fc; --radius:18px; --shadow:0 12px 35px rgba(8,43,82,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:85px}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:var(--blue)}
+    .topbar{background:var(--navy);color:#fff;font-size:.9rem;padding:.55rem 1rem;text-align:center}
+    header{background:linear-gradient(120deg,#082b52 0%,#104d87 70%,#176fb0 100%);color:white;position:relative;overflow:hidden}
+    header:after{content:"";position:absolute;width:440px;height:440px;border:1px solid rgba(255,255,255,.18);border-radius:50%;right:-110px;top:-220px;box-shadow:0 0 0 35px rgba(255,255,255,.035),0 0 0 75px rgba(255,255,255,.025)}
+    .wrap{width:min(1120px,92%);margin:auto}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0;position:relative;z-index:2}
+    .brand{font-weight:800;letter-spacing:.02em;color:#fff;text-decoration:none}
+    .navlinks{display:flex;flex-wrap:wrap;gap:.85rem}
+    .navlinks a{color:#eaf4ff;text-decoration:none;font-size:.92rem}
+    .navlinks a:hover{text-decoration:underline}
+    .hero{padding:4.2rem 0 4.5rem;position:relative;z-index:1}
+    .eyebrow{color:#ffdc7a;text-transform:uppercase;letter-spacing:.13em;font-size:.82rem;font-weight:800}
+    h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.08;max-width:850px;margin:.7rem 0 1rem;letter-spacing:-.035em}
+    .hero p{font-size:clamp(1.05rem,2vw,1.25rem);max-width:740px;color:#e3effb}
+    .pills{display:flex;flex-wrap:wrap;gap:.65rem;margin:1.5rem 0}
+    .pill{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.09);padding:.5rem .85rem;border-radius:999px;font-weight:650;font-size:.93rem}
+    .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:.8rem 1.25rem;text-decoration:none;font-weight:800;border:2px solid transparent}
+    .btn.gold{background:var(--gold);color:#172b43}.btn.outline{border-color:#c7e0f8;color:white}
+    main section{padding:4rem 0}
+    section.alt{background:var(--surface)}
+    .section-kicker{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+    h2{color:var(--navy);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2;margin:.35rem 0 1rem}
+    .lead{max-width:800px;color:var(--muted);font-size:1.08rem}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin-top:1.6rem}
+    .card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow)}
+    .card h3{margin:.2rem 0 .45rem;color:var(--navy)}
+    .icon{font-size:1.7rem}
+    .notice{background:#fff8e6;border-left:4px solid var(--gold);padding:1rem 1.2rem;border-radius:8px;color:#614b17}
+    .schedule{width:100%;border-collapse:collapse;margin-top:1.5rem;background:#fff;border-radius:12px;overflow:hidden}
+    .schedule th,.schedule td{padding:.9rem 1rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    .schedule th{background:var(--navy);color:#fff}
+    .schedule tr:last-child td{border-bottom:0}
+    .speaker-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.5rem}
+    .speaker{border:1px dashed #9bb4ca;border-radius:var(--radius);padding:1.3rem;background:#fff}
+    .avatar{width:58px;height:58px;border-radius:50%;background:var(--sky);display:grid;place-items:center;font-size:1.6rem;color:var(--blue);margin-bottom:.7rem}
+    .speaker small{color:var(--muted)}
+    .contact{background:var(--navy);color:white;padding:3rem 0}
+    .contact h2{color:white}.contact a{color:#ffdc7a}
+    footer{background:#051d37;color:#d0deeb;padding:1.2rem 0;font-size:.9rem}
+    .small{font-size:.9rem;color:var(--muted)}
+    @media(max-width:800px){.grid,.speaker-grid{grid-template-columns:1fr 1fr}.navlinks{gap:.5rem}.navlinks a{font-size:.82rem}}
+    @media(max-width:560px){nav{align-items:flex-start;flex-direction:column}.hero{padding:3rem 0}.grid,.speaker-grid{grid-template-columns:1fr}main section{padding:3rem 0}.schedule th,.schedule td{padding:.7rem;font-size:.9rem}}
+  </style>
+</head>
+<body>
+  <div class="topbar">Universidad Nacional de Trujillo · Departamento de Matemáticas</div>
+  <header id="inicio">
+    <div class="wrap">
+      <nav aria-label="Navegación principal">
+        <a class="brand" href="#inicio">II SISD · UNT</a>
+        <div class="navlinks">
+          <a href="#presentacion">Presentación</a><a href="#tematicas">Temáticas</a>
+          <a href="#programa">Programa</a><a href="#ponentes">Conferencistas</a>
+          <a href="#inscripcion">Inscripción</a><a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="eyebrow">Encuentro académico internacional · Modalidad online</div>
+        <h1>II Seminario Internacional de Sistemas Dinámicos</h1>
+        <p>Un espacio de encuentro, divulgación e intercambio científico en sistemas dinámicos, ecuaciones diferenciales y sus aplicaciones.</p>
+        <div class="pills">
+          <span class="pill">📅 9 al 12 de noviembre de 2026</span>
+          <span class="pill">💻 Modalidad virtual</span>
+          <span class="pill">📍 Departamento de Matemáticas · UNT</span>
+        </div>
+        <div class="actions">
+          <a class="btn gold" href="#inscripcion">Información de inscripción</a>
+          <a class="btn outline" href="#programa">Consultar programa</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="presentacion">
+      <div class="wrap">
+        <div class="section-kicker">Bienvenida</div>
+        <h2>Sobre el seminario</h2>
+        <p class="lead">El II Seminario Internacional de Sistemas Dinámicos es una actividad académica y científica organizada por el Departamento Académico de Matemáticas de la Universidad Nacional de Trujillo (UNT), Perú, orientada a promover la difusión del conocimiento matemático, fortalecer la formación científica y fomentar el intercambio de experiencias y resultados de investigación en las áreas de los sistemas dinámicos y las ecuaciones diferenciales.
+
+El evento se desarrollará en modalidad virtual del 09 al 12 de noviembre de 2026 y comprenderá un programa de conferencias especializadas, exposiciones científicas y espacios de discusión e interacción académica. Estas actividades propiciarán el acercamiento a desarrollos recientes, perspectivas teóricas y problemas de investigación relevantes en las áreas contempladas en el seminario.
+
+El programa científico abordará diversas líneas de investigación, entre ellas los sistemas dinámicos continuos y discretos, las ecuaciones diferenciales, la teoría de bifurcaciones, la dinámica topológica y compleja, los sistemas hamiltonianos y los sistemas dinámicos discontinuos, así como otras temáticas relacionadas con el desarrollo contemporáneo de esta disciplina.</p>
+        <div class="grid">
+          <article class="card"><div class="icon">🎯</div><h3>Objetivo</h3><p>Contribuir al fortalecimiento de la formación matemática, académica e investigadora de estudiantes, docentes e investigadores, mediante la difusión de avances teóricos y metodológicos en sistemas dinámicos y ecuaciones diferenciales, así como de sus interrelaciones con otras áreas de las matemáticas y sus aplicaciones en diversos contextos científicos.
+
+Asimismo, se propone estimular el interés por la investigación matemática, favorecer el intercambio de conocimientos entre especialistas y participantes, y propiciar espacios de discusión que permitan identificar problemas de interés común, nuevas perspectivas de estudio y posibles líneas de investigación conjunta.</p></article>
+          <article class="card"><div class="icon">🌎</div><h3>Alcance internacional</h3><p>En su dimensión internacional, el seminario reunirá a
+investigadores y especialistas de Perú, Brasil, España y Estados Unidos, vinculados a reconocidas instituciones académicas y de investigación, cuya participación contribuirá al intercambio de experiencias científicas y a la difusión de diferentes enfoques y perspectivas en el estudio de los sistemas dinámicos y las ecuaciones diferenciales.
+
+La participación de conferencistas nacionales e internacionales constituirá una oportunidad para fortalecer los vínculos entre la Universidad Nacional de Trujillo y otras instituciones de educación superior, así como para promover futuras iniciativas de colaboración académica, cooperación científica y desarrollo de proyectos de investigación conjuntos.
+
+De esta manera, el seminario aspira a consolidarse como un espacio de encuentro e integración de la comunidad matemática, favoreciendo la articulación entre la formación universitaria, la actividad investigadora y la cooperación científica nacional e internacional.</p></article>
+          <article class="card"><div class="icon">💻</div><h3>Modalidad</h3><p>El seminario se desarrollará de manera online. Los enlaces de acceso y las indicaciones se publicarán en esta página antes del evento.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="tematicas">
+      <div class="wrap">
+        <div class="section-kicker">Áreas científicas</div>
+<h2>Ejes temáticos</h2>
+<p class="lead">
+  Las conferencias y actividades académicas abordarán, entre otros, los siguientes ejes temáticos:
+</p>
+
+<div class="grid">
+  
+  <article class="card">
+    <h3>Sistemas Dinámicos y Teoría Cualitativa</h3>
+    <p>
+      Sistemas dinámicos continuos y discretos, teoría cualitativa de ecuaciones
+      diferenciales, estabilidad, órbitas periódicas y ciclos límite.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>Bifurcaciones y Fenómenos Dinámicos</h3>
+    <p>
+      Teoría de bifurcaciones, bifurcaciones locales y globales, integrabilidad
+      y estudio cualitativo de soluciones y comportamientos dinámicos.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>Dinámica Topológica, Geométrica y Simbólica</h3>
+    <p>
+      Dinámica topológica, dinámica simbólica, difeomorfismos, foliaciones,
+      distribuciones, Geometría y Topología de los sistemas dinámicos.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>Dinámica Compleja</h3>
+    <p>
+      Sistemas dinámicos holomorfos, dinámica compleja, singularidades,
+      foliaciones holomorfas y dinámica en varias variables complejas.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>Sistemas Hamiltonianos, Reversibles y Discontinuos</h3>
+    <p>
+      Sistemas hamiltonianos, conservativos y no conservativos, sistemas
+      reversibles y equivariantes, sistemas discontinuos y suaves por partes.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>Aplicaciones y Modelización Matemática</h3>
+    <p>
+      Aplicaciones de los sistemas dinámicos en Física, Biología, Mecánica
+      Celeste, Mecánica de Fluidos, Ciencias e Ingeniería.
+    </p>
+  </article>
+</div>
+    </section>
+
+    <section id="programa">
+      <div class="wrap">
+        <div class="section-kicker">Agenda académica</div>
+        <h2>Programa científico</h2>
+        <p class="lead">El programa detallado, con títulos de las conferencias, nombres de los ponentes y horarios, se publicará aquí una vez confirmada la agenda.</p>
+        <div class="notice"><strong>Próximamente:</strong> se incorporará el horario oficial y la zona horaria de referencia (Perú, UTC−5).</div>
+        <table class="schedule">
+          <thead><tr><th>Fecha</th><th>Actividad</th><th>Horario</th></tr></thead>
+          <tbody>
+            <tr><td>09/11/2026</td><td>Jornada 1 · Conferencias y bienvenida</td><td>Por confirmar</td></tr>
+            <tr><td>10/11/2026</td><td>Jornada 2 · Conferencias</td><td>Por confirmar</td></tr>
+            <tr><td>11/11/2026</td><td>Jornada 3 · Conferencias</td><td>Por confirmar</td></tr>
+            <tr><td>12/11/2026</td><td>Jornada 4 · Conferencias y cierre</td><td>Por confirmar</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="alt" id="ponentes">
+      <div class="wrap">
+        <div class="section-kicker">Invitados</div>
+        <h2>Conferencistas</h2>
+        <p class="lead">En esta sección se presentará a cada conferencista invitado, su afiliación institucional, título de conferencia y una breve reseña académica.</p>
+        <div class="speaker-grid">
+          <article class="speaker"><div class="avatar">🎓</div><h3>Ponente invitado</h3><small>Institución y país</small><p>Biografía académica y título de la conferencia por incorporar.</p></article>
+          <article class="speaker"><div class="avatar">🎓</div><h3>Ponente invitado</h3><small>Institución y país</small><p>Biografía académica y título de la conferencia por incorporar.</p></article>
+          <article class="speaker"><div class="avatar">🎓</div><h3>Ponente invitado</h3><small>Institución y país</small><p>Biografía académica y título de la conferencia por incorporar.</p></article>
+        </div>
+        <p class="small">Los espacios son provisionales. Sustituye estos textos por la información confirmada de los expositores.</p>
+      </div>
+    </section>
+
+    <section id="inscripcion">
+      <div class="wrap">
+        <div class="section-kicker">Participación</div>
+        <h2>Inscripción y acceso online</h2>
+        <p class="lead">La información sobre el registro de participantes, requisitos de certificación y acceso a las sesiones se anunciará por los canales oficiales del seminario.</p>
+        <div class="grid">
+          <article class="card"><h3>Registro de participantes</h3><p>Enlace al formulario de inscripción por publicar.</p><a href="mailto:matematicas@unitru.edu.pe?subject=Consulta%20sobre%20inscripci%C3%B3n%20al%20II%20Seminario%20Internacional%20de%20Sistemas%20Din%C3%A1micos">Consultar por correo</a></article>
+          <article class="card"><h3>Enlace de las sesiones</h3><p>El enlace de Zoom y las instrucciones de ingreso se publicarán antes del inicio.</p></article>
+          <article class="card"><h3>Certificados</h3><p>Los criterios de asistencia y emisión de certificados serán comunicados por la organización.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <div class="section-kicker" style="color:#ffdc7a">Organización y consultas</div>
+      <h2>Departamento de Matemáticas · UNT</h2>
+      <p>Universidad Nacional de Trujillo<br>Trujillo, La Libertad, Perú</p>
+      <p>Correo de contacto: <a href="mailto:REEMPLAZAR_CORREO@ejemplo.com">srenteria@unitru.edu.pe</a></p>
+    </div>
+  </section>
+  <footer><div class="wrap">© 2026 · II Seminario Internacional de Sistemas Dinámicos · Universidad Nacional de Trujillo</div></footer>
+</body>
+</html>
